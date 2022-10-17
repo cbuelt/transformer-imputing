@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9b262456-74e4-4c9f-b441-a6a96f73e1dd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/git_repo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Transformer_Full.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/.ipynb_checkpoints/KNN_Imputer-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/.ipynb_checkpoints/LOCF-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/.ipynb_checkpoints/LSTM-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/.ipynb_checkpoints/Transformer_v1-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/.ipynb_checkpoints/distribution_analysis-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/KNN_Imputer.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/LOCF.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/LSTM.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/LSTM_model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Transformer_v1.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/distribution_analysis.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/weights/lstm/checkpoint" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/weights/lstm/lstm_weights.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/weights/lstm/lstm_weights.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/weights/transformer/checkpoint" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/weights/transformer/transformer_weights.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/weights/transformer/transformer_weights.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/example_plot.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/example_plot_1.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/example_plot_2.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/metrics.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocessing/.ipynb_checkpoints/Missing values-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocessing/.ipynb_checkpoints/data_prep-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocessing/Missing values.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocessing/data_prep.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocessing/missing_data_matrix.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocessing/missing_data_matrix_subset.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocessing/time_series_example.pdf" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2GGhiRaUrVB1bRTeKoY1x7sQJjE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9b262456-74e4-4c9f-b441-a6a96f73e1dd" name="Changes" comment="" />
+      <created>1666020956420</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1666020956420</updated>
+      <workItem from="1666020959590" duration="1935000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

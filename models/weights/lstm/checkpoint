@@ -1,2 +1,0 @@
-model_checkpoint_path: "lstm_weights"
-all_model_checkpoint_paths: "lstm_weights"
