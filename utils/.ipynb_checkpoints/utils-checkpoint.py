@@ -13,12 +13,12 @@ def load_data():
 def load_data_information():
     with open("../data/data_information.pkl", "rb") as p:
         data_information = pickle.load(p)
-    countries, years, feature_names, no_features = data_information
+    countries, years, feature_names, nu_features = data_information
     hours = np.arange(24)
     months = np.arange(12)
     weekdays = np.arange(7)
 
-    return countries, no_features, feature_names, years, months, weekdays, hours
+    return countries, nu_features, feature_names, years, months, weekdays, hours
 
 
 def get_dictionaries():

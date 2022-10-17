@@ -1,9 +1,9 @@
-import tensorflow as tf
-from tensorflow.keras.layers import *
-
 '''
 This files includes the methods that define the attention model (MVTSI)
 '''
+
+import tensorflow as tf
+from tensorflow.keras.layers import *
 
 
 def scaled_dot_product_attention(q, k, v):
@@ -261,3 +261,32 @@ def loss_function(real, pred, miss_vals, mask):
     #Exclude missing values
     loss = tf.math.sqrt(tf.math.reduce_mean(error[missing == 0]))
     return loss
+
+
+def train_step(country, year, features, features_masked, miss_vals, miss_vals_masked,
+               pos_enc, feature_nr, mask, optimizer):
+    '''
+    Perform a training step for the MVTSI model
+    :param country: Information about country
+    :param year: Information about year
+    :param features: Feature vector
+    :param features_masked: Vector with masked features
+    :param miss_vals: Missing value vector
+    :param miss_vals_masked: Vector with masked missing values
+    :param pos_enc: Positional encodings
+    :param feature_nr: Vector of feature numbers
+    :param mask: Mask
+    :param optimizer: Used optimizer
+    :return: loss, pred, attention_weights
+    '''
+    training = True
+
+    with tf.GradientTape() as tape:
+        pred, attention_weights = MVTSI(country, year, features_masked, miss_vals_masked,
+                                              pos_enc, feature_nr,  training)
+
+        loss = loss_function(features, pred, miss_vals, mask)
+
+    gradients = tape.gradient(loss, MVTSI.trainable_variables)
+    optimizer.apply_gradients(zip(gradients, MVTSI.trainable_variables))
+    return loss, pred, attention_weights
