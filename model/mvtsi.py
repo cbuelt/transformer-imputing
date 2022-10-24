@@ -6,6 +6,7 @@ import tensorflow as tf
 from tensorflow.keras.layers import *
 
 
+
 def scaled_dot_product_attention(q, k, v):
     '''
     Calculate the attention weights.
@@ -290,3 +291,49 @@ def train_step(country, year, features, features_masked, miss_vals, miss_vals_ma
     gradients = tape.gradient(loss, MVTSI.trainable_variables)
     optimizer.apply_gradients(zip(gradients, MVTSI.trainable_variables))
     return loss, pred, attention_weights
+
+
+
+def lstm_model(dropout_rate = 0.1):
+    '''
+    Define the first stage LSTM model for estimating the distribution of missing values
+    :param dropout_rate: Dropout rate for the LSTM layers
+    :return: model
+    '''
+
+    # Define Inputs and Embeddings
+    sequence_input = Input(shape=(None, 1))
+    encoding_input = Input(shape=(None, 6))
+    year_input = Input(shape=(None,))
+    country_input = Input(shape=(None,))
+    feature_nr_input = Input(shape=(None,))
+
+    # Embeddings
+    year_emb = Embedding(n_years, 2)
+    country_emb = Embedding(n_years, 6)
+    feature_nr_emb = Embedding(no_features, 4)
+
+    # Define layers
+    lstm_layer = LSTM(64, return_sequences=True, dropout=dropout_rate)
+    lstm_layer2 = LSTM(64, return_sequences=True, dropout=dropout_rate)
+    dense_layer = Dense(1, activation="sigmoid")
+
+    # Add embeddings and features
+    year_embedding = year_emb(year_input)
+    country_embedding = country_emb(country_input)
+    feature_embedding = feature_nr_emb(feature_nr_input)
+    embeddings = tf.concat([year_embedding, country_embedding, feature_embedding], axis=-1)
+
+    # Concatenate embeddings
+    input = tf.concat([sequence_input, embeddings], axis=2)
+    # Add pos enc
+    input = tf.concat([input, encoding_input], axis=-1)
+
+    # Create model structure
+    x = lstm_layer(input)
+    x = lstm_layer2(x)
+    x = dense_layer(x)
+
+    # Define Model
+    model = Model([sequence_input, encoding_input, year_input, country_input, feature_nr_input], x)
+    return model
